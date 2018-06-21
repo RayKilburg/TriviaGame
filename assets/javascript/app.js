@@ -33,6 +33,12 @@
 // }
 // alert("you got " + score + "/" + questions.length);
 ////////////////////////////////////////////////////////
+//start game btn
+$(".main-game").css("display", "none");
+$(".start-button").on("click", function() {
+  $(".main-game").css("display", "block");
+  $(".start-button").css("display", "none");
+});
 
 //question variables
 function check() {
@@ -107,6 +113,25 @@ function check() {
     "You got " + correct + " correct.";
   document.getElementById("picture").src = pictures[score];
 }
+
+var timeLeft = 60;
+var elem = document.getElementById("some_div");
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == -1) {
+    clearTimeout(timerId);
+    timesUp();
+  } else {
+    elem.innerHTML = timeLeft + " seconds remaining";
+    timeLeft--;
+  }
+}
+
+function timesUp() {
+  alert("Times Up");
+}
+countdown();
 //timer function
 //restart funtion btn
 //fix score

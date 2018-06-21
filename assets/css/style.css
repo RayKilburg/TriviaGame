@@ -26,4 +26,14 @@ input {
 }
 body {
   background-image: url("https://images3.alphacoders.com/486/thumb-1920-48689.jpg");
+  /* background-repeat-x: no-repeat;
+  background-size: contain; */
+}
+#finish-game{
+  text-align: center;
+}
+.start-game{
+  text-align: center;
+  height: 200px;
+  width: 300px;
 }
