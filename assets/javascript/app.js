@@ -32,14 +32,10 @@ $(".end-button").on("click", function() {
 
 
 });
-// ".end-button".on("click", function() {
-//   console.log(correct);
-// });
-
-//end game onlick
 
 //question variables
 function check() {
+  // var ques1 = $("input[name=question1]:checked").val()
   var question1 = document.quiz.question1.value;
   var question2 = document.quiz.question2.value;
   var question3 = document.quiz.question3.value;
@@ -54,7 +50,7 @@ function check() {
   //logic for each question
   if (question1 == "yes") {
     correct++;
-  }
+  } 
   if (question2 == "yes") {
     correct++;
   }
@@ -86,11 +82,9 @@ function check() {
   console.log("correct =" + correct);
 }
 
-
 //90 sec countdown
  var timeLeft = 90;
  var elem = document.getElementById("some_div");
-//  var timerId = setInterval(countdown, 1000);
 
 function countdown() {
 
@@ -106,6 +100,10 @@ function countdown() {
 
 function timesUp() {
   // alert("Times Up");
+}
+
+function reset(){
+
 }
 
 
