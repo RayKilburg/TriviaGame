@@ -5,7 +5,7 @@ $(".main-game").css("display", "none");
 $(".end-game").css("display", "none");
 //start btn onclick
 $(".start-button").on("click", function() {
-var timerId = setInterval(countdown, 1000);
+  var timerId = setInterval(countdown, 1000);
   countdown();
   //displaying main game
   $(".main-game").css("display", "block");
@@ -24,13 +24,11 @@ $(".submitBtn").on("click", function(event) {
 
 //end-game onclick
 $(".end-button").on("click", function() {
-//   //displaying main game
-//   //hiding start button and background
+  //   //displaying main game
+  //   //hiding start button and background
   $(".end-game").css("display", "none");
   $(".start-game").css("display", "block");
   $(".start-button").css("display", "block");
-
-
 });
 
 //question variables
@@ -50,7 +48,7 @@ function check() {
   //logic for each question
   if (question1 == "yes") {
     correct++;
-  } 
+  }
   if (question2 == "yes") {
     correct++;
   }
@@ -75,19 +73,19 @@ function check() {
   if (question9 == "yes") {
     correct++;
   }
-  if (question10 == "yes") {
+  if (question10 == "Backstreet Boys") {
     correct++;
   }
-  document.getElementById("number_correct").innerHTML = correct + "out of";
+  document.getElementById("number_correct").innerHTML =
+    "You got " + correct + " out of 10 correct";
   console.log("correct =" + correct);
 }
 
 //90 sec countdown
- var timeLeft = 90;
- var elem = document.getElementById("some_div");
+var timeLeft = 90;
+var elem = document.getElementById("some_div");
 
 function countdown() {
-
   if (timeLeft == -1) {
     clearTimeout(timerId);
     timesUp();
@@ -100,10 +98,8 @@ function countdown() {
 
 function timesUp() {
   // alert("Times Up");
+  if (timeLeft == -1) {
+  }
 }
 
-function reset(){
-
-}
-
-
+function reset() {}
